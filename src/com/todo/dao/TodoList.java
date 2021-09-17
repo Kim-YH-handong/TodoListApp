@@ -37,9 +37,15 @@ public class TodoList {
 
 	public void listAll() {
 		System.out.println("\n"
+<<<<<<< HEAD
 				+ "-------모든 일정-------\n");
 		for (TodoItem myitem : list) {
 			System.out.printf("\n[%s] %s - %s", myitem.getTitle(), myitem.getDesc(), myitem.getCurrent_date());
+=======
+				+ "inside list_All method\n");
+		for (TodoItem myitem : list) {
+			System.out.println(myitem.getTitle() + myitem.getDesc());
+>>>>>>> refs/remotes/master/master
 		}
 	}
 	

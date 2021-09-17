@@ -12,6 +12,7 @@ public class TodoMain {
 	
 		Scanner sc = new Scanner(System.in);
 		TodoList l = new TodoList();
+<<<<<<< HEAD
 		TodoUtil.loadList(l, "todolist.txt");
 		boolean isList = false;
 		boolean quit = false;
@@ -62,6 +63,55 @@ public class TodoMain {
 				quit = true;
 				break;
 				
+=======
+		boolean isList = false;
+		boolean quit = false;
+		do {
+			Menu.displaymenu();
+			isList = false;
+			String choice = sc.next();
+			switch (choice) {
+
+			case "add":
+				TodoUtil.createItem(l);
+				break;
+			
+			case "del":
+				TodoUtil.deleteItem(l);
+				break;
+				
+			case "edit":
+				TodoUtil.updateItem(l);
+				break;
+				
+			case "ls":
+				TodoUtil.listAll(l);
+				break;
+
+			case "asc":
+				l.sortByName();
+				isList = true;
+				break;
+
+			case "desc":
+				l.sortByName();
+				l.reverseList();
+				isList = true;
+				break;
+				
+			case "date":
+				l.sortByDate();
+				isList = true;
+				break;
+				
+			case "help":
+				quit = true;
+				break;
+
+			case "exit":
+				quit = true;
+				break;
+>>>>>>> refs/remotes/master/master
 
 			default:
 				System.out.println("위에 언급된 명령어를 입력해주세요(help - 도움말)");
