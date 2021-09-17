@@ -36,20 +36,24 @@ public class TodoMain {
 				TodoUtil.listAll(l);
 				break;
 
-			case "ls_name_asc":
+			case "asc":
 				l.sortByName();
 				isList = true;
 				break;
 
-			case "ls_name_desc":
+			case "desc":
 				l.sortByName();
 				l.reverseList();
 				isList = true;
 				break;
 				
-			case "ls_date":
+			case "date":
 				l.sortByDate();
 				isList = true;
+				break;
+				
+			case "help":
+				quit = true;
 				break;
 
 			case "exit":
@@ -57,7 +61,7 @@ public class TodoMain {
 				break;
 
 			default:
-				System.out.println("please enter one of the above mentioned command");
+				System.out.println("위에 언급된 명령어를 입력해주세요(help - 도움말)");
 				break;
 			}
 			
